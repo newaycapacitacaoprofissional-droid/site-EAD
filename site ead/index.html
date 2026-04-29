@@ -1,0 +1,426 @@
+<!doctype html>
+<html lang="pt-BR" class="h-full">
+ <head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Neway Capacitação Profissional - Transforme sua Carreira</title>
+  <script src="https://cdn.tailwindcss.com/3.4.17"></script>
+  <script src="https://cdn.jsdelivr.net/npm/lucide@0.263.0/dist/umd/lucide.min.js"></script>
+  <script src="/_sdk/element_sdk.js"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&amp;family=Inter:wght@300;400;500;600;700&amp;display=swap" rel="stylesheet">
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: { poppins: ['Poppins', 'sans-serif'], inter: ['Inter', 'sans-serif'] },
+          colors: {
+            neway: { red: '#E63946', dark: '#1a1a2e', gray: '#f8f9fa', graymed: '#a0aec0', light: '#f1f5f9' }
+          }
+        }
+      }
+    }
+  </script>
+  <style>
+    html, body { height: 100%; margin: 0; }
+    .fade-in { animation: fadeIn 0.8s ease forwards; opacity: 0; }
+    .fade-in-delay-1 { animation-delay: 0.2s; }
+    .fade-in-delay-2 { animation-delay: 0.4s; }
+    .fade-in-delay-3 { animation-delay: 0.6s; }
+    .fade-in-delay-4 { animation-delay: 0.8s; }
+    @keyframes fadeIn { to { opacity: 1; transform: translateY(0); } from { opacity: 0; transform: translateY(30px); } }
+    .glow-effect { box-shadow: 0 0 30px rgba(230, 57, 70, 0.15); }
+    .glow-hover:hover { box-shadow: 0 0 40px rgba(230, 57, 70, 0.25); transition: all 0.3s ease; }
+    .gradient-bg { background: linear-gradient(135deg, #e63946 0%, #a4161a 100%); }
+    .gradient-text { background: linear-gradient(135deg, #e63946, #a4161a); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; }
+    .card-hover { transition: all 0.4s cubic-bezier(0.23, 1, 0.320, 1); }
+    .card-hover:hover { transform: translateY(-12px); box-shadow: 0 20px 50px rgba(230, 57, 70, 0.2); }
+    .slide-in-left { animation: slideInLeft 0.8s ease forwards; }
+    .slide-in-right { animation: slideInRight 0.8s ease forwards; }
+    @keyframes slideInLeft { from { opacity: 0; transform: translateX(-50px); } to { opacity: 1; transform: translateX(0); } }
+    @keyframes slideInRight { from { opacity: 0; transform: translateX(50px); } to { opacity: 1; transform: translateX(0); } }
+    .pulse-dot { animation: pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite; }
+    @keyframes pulse { 0%, 100% { opacity: 1; } 50% { opacity: 0.5; } }
+    .counter { font-size: 3rem; font-weight: 900; }
+  </style>
+  <style>body { box-sizing: border-box; }</style>
+  <script src="/_sdk/data_sdk.js" type="text/javascript"></script>
+ </head>
+ <body class="h-full font-inter bg-neway-gray text-neway-dark overflow-auto">
+  <div class="w-full h-full overflow-auto"><!-- Navbar Premium -->
+   <nav class="w-full bg-white sticky top-0 z-50 border-b border-gray-100/50">
+    <div class="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between">
+     <div class="flex items-center gap-3 cursor-pointer group">
+        <div>
+    
+      <img src="images/logo-neway.png" alt="Neway" class="w-50 h-50 object-contain">
+      </div>
+     </div>
+     <div class="hidden lg:flex items-center gap-8 text-sm font-medium"><a href="#cursos" class="text-gray-600 hover:text-neway-red transition duration-300">Cursos</a> <a href="#diferenciais" class="text-gray-600 hover:text-neway-red transition duration-300">Diferenciais</a> <a href="#depoimentos" class="text-gray-600 hover:text-neway-red transition duration-300">Depoimentos</a> <a href="#contato" class="text-gray-600 hover:text-neway-red transition duration-300">Contato</a>
+     </div><a href="#cta" class="hidden md:block gradient-bg text-white font-semibold px-6 py-2.5 rounded-lg hover:shadow-lg transition duration-300">Agendar Aula</a>
+    </div>
+   </nav><!-- Hero Section Épica -->
+   <section class="w-full bg-grey pt-20 pb-32 md:pt-32 md:pb-40 relative overflow-hidden">
+    <div class="absolute top-0 right-0 w-96 h-96 bg-neway-red/5 rounded-full -mr-48 -mt-48 blur-3xl"></div>
+    <div class="absolute bottom-0 left-0 w-80 h-80 bg-neway-red/3 rounded-full -ml-40 blur-3xl"></div>
+    <div class="max-w-7xl mx-auto px-6 grid md:grid-cols-2 gap-16 items-center relative z-10"><!-- Lado Esquerdo -->
+     <div class="space-y-8 slide-in-left">
+      <div class="space-y-4">
+       <p class="text-neway-red font-poppins font-700 text-sm uppercase tracking-widest"> Novas Vagas 2026</p>
+       <h1 id="hero-title" class="font-poppins font-900 text-5xl md:text-6xl leading-tight text-neway-dark">Domine o Pacote Office e se destaque no mercado</h1>
+       <p id="hero-subtitle" class="text-lg text-gray-600 max-w-lg leading-relaxed font-inter">Transforme seu potencial com aulas 100% práticas. Simulações reais, professores experientes e certificação reconhecida pelo mercado.</p>
+      </div>
+      <div class="flex flex-col sm:flex-row gap-4 pt-4"><a id="cta-btn" href="#cta" class="gradient-bg text-white font-poppins font-700 px-8 py-4 rounded-xl hover:shadow-2xl transition duration-300 text-center inline-flex items-center justify-center gap-2"> <i data-lucide="zap" class="w-5 h-5"></i> Matrículas Abertas </a> <a href="#cursos" class="border-2 border-neway-red text-neway-red font-poppins font-700 px-8 py-4 rounded-xl hover:bg-red-50 transition duration-300 text-center inline-flex items-center justify-center gap-2"> <i data-lucide="play-circle" class="w-5 h-5"></i> Ver Cursos </a>
+      </div>
+      <div class="flex gap-8 pt-8">
+       <div class="flex items-center gap-3">
+        <div class="w-12 h-12 bg-neway-red/10 rounded-lg flex items-center justify-center"><i data-lucide="video" class="w-6 h-6 text-neway-red"></i>
+        </div>
+        <div>
+         <p class="font-poppins font-700 text-sm text-neway-dark">Presencial &amp; Online</p>
+         <p class="text-xs text-gray-500">NewayEAD</p>
+        </div>
+       </div>
+       <div class="flex items-center gap-3">
+        <div class="w-12 h-12 bg-neway-red/10 rounded-lg flex items-center justify-center"><i data-lucide="clock" class="w-6 h-6 text-neway-red"></i>
+        </div>
+        <div>
+         <p class="font-poppins font-700 text-sm text-neway-dark">Horários Flexíveis</p>
+         <p class="text-xs text-gray-500">Manhã, Tarde, Noite</p>
+        </div>
+       </div>
+      </div>
+     </div><!-- Lado Direito - Ilustração Interativa -->
+     <div class="slide-in-right hidden md:block">
+      <div class="relative">
+       <div class="absolute inset-0 gradient-bg rounded-3xl blur-3xl opacity-20"></div>
+       <div class="relative bg-white rounded-3xl p-8 glow-effect border border-gray-100/50">
+        <div class="space-y-6"><!-- Card 1 -->
+         <div class="bg-gradient-to-br from-blue-50 to-blue-100/50 rounded-2xl p-5 border border-blue-200/30 fade-in fade-in-delay-1">
+          <div class="flex items-center justify-between mb-3">
+           <div class="w-10 h-10 bg-blue-500 rounded-lg flex items-center justify-center"><i data-lucide="monitor" class="w-5 h-5 text-white"></i>
+           </div><span class="text-xs font-semibold text-blue-600 bg-blue-100 px-2 py-1 rounded-full">Em andamento</span>
+          </div>
+          <p class="font-poppins font-600 text-sm text-gray-800">Excel Avançado</p>
+          <p class="text-xs text-gray-500 mt-1">Turma B - 15 alunos</p>
+          <div class="w-full bg-gray-200 rounded-full h-2 mt-3">
+           <div class="bg-blue-500 h-2 rounded-full w-3/4"></div>
+          </div>
+         </div><!-- Card 2 -->
+         <div class="bg-gradient-to-br from-green-50 to-green-100/50 rounded-2xl p-5 border border-green-200/30 fade-in fade-in-delay-2">
+          <div class="flex items-center justify-between mb-3">
+           <div class="w-10 h-10 bg-green-500 rounded-lg flex items-center justify-center"><i data-lucide="check-circle-2" class="w-5 h-5 text-white"></i>
+           </div><span class="text-xs font-semibold text-green-600 bg-green-100 px-2 py-1 rounded-full">Concluído</span>
+          </div>
+          <p class="font-poppins font-600 text-sm text-gray-800">Pacote Office</p>
+          <p class="text-xs text-gray-500 mt-1">Certificado emitido</p>
+          <div class="flex gap-2 mt-3"><span class="text-lg">⭐⭐⭐⭐⭐</span>
+          </div>
+         </div><!-- Card 3 -->
+         <div class="bg-gradient-to-br from-purple-50 to-purple-100/50 rounded-2xl p-5 border border-purple-200/30 fade-in fade-in-delay-3">
+          <div class="flex items-center justify-between mb-3">
+           <div class="w-10 h-10 bg-neway-red rounded-lg flex items-center justify-center"><i data-lucide="users" class="w-5 h-5 text-white"></i>
+           </div><span class="text-xs font-semibold text-neway-red bg-red-100 px-2 py-1 rounded-full">Próxima turma</span>
+          </div>
+          <p class="font-poppins font-600 text-sm text-gray-800">Informática Básica</p>
+          <p class="text-xs text-gray-500 mt-1">25 vagas disponíveis</p><button class="text-xs font-semibold text-neway-red mt-3 hover:underline">Inscrever-se →</button>
+         </div>
+        </div>
+       </div>
+      </div>
+     </div>
+    </div>
+   </section><!-- Estatísticas / Social Proof -->
+   <section class="w-full bg-neway-dark py-16">
+    <div class="max-w-7xl mx-auto px-6">
+     <div class="grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
+      <div class="text-white fade-in">
+       <p class="counter text-neway-red">2.500+</p>
+       <p class="text-gray-300 font-medium">Alunos Formados</p>
+      </div>
+      <div class="text-white fade-in fade-in-delay-1">
+       <p class="counter text-neway-red">15+</p>
+       <p class="text-gray-300 font-medium">Anos de Experiência</p>
+      </div>
+      <div class="text-white fade-in fade-in-delay-2">
+       <p class="counter text-neway-red">98%</p>
+       <p class="text-gray-300 font-medium">Taxa de Aprovação</p>
+      </div>
+      <div class="text-white fade-in fade-in-delay-3">
+       <p class="counter text-neway-red">4.9★</p>
+       <p class="text-gray-300 font-medium">Avaliação Média</p>
+      </div>
+     </div>
+    </div>
+   </section><!-- Seção de Cursos -->
+   <section id="cursos" class="w-full bg-white py-28">
+    <div class="max-w-7xl mx-auto px-6">
+     <div class="text-center mb-20">
+      <p class="text-neway-red font-poppins font-700 text-sm uppercase tracking-widest mb-3">Programas Profissionais</p>
+      <h2 class="font-poppins font-900 text-5xl text-neway-dark mb-4">Cursos que Transformam Carreiras</h2>
+      <p class="text-gray-600 max-w-2xl mx-auto text-lg">Escolha entre nossos cursos especializados e desenvolva habilidades demandadas pelo mercado</p>
+     </div>
+     <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-8"><!-- Curso 1 -->
+      <div class="bg-white rounded-2xl border border-gray-200 overflow-hidden card-hover group fade-in">
+       <div class="h-48 bg-gradient-to-br from-blue-500 to-blue-600 flex items-center justify-center group-hover:scale-110 transition duration-500"><i data-lucide="layout-grid" class="w-16 h-16 text-white opacity-80"></i>
+       </div>
+       <div class="p-6">
+        <h3 class="font-poppins font-800 text-xl mb-3">Pacote Office</h3>
+        <p class="text-gray-600 text-sm mb-4 min-h-12">Word, Excel e PowerPoint completos para dominar as ferramentas essenciais.</p>
+        <div class="flex items-center justify-between"><span class="text-xs font-semibold text-gray-400">12 semanas</span> <a href="#cta" class="text-neway-red font-poppins font-700 hover:gap-2 transition inline-flex items-center gap-1">Detalhes <i data-lucide="arrow-right" class="w-4 h-4"></i></a>
+        </div>
+       </div>
+      </div><!-- Curso 2 -->
+      <div class="bg-white rounded-2xl border border-gray-200 overflow-hidden card-hover group fade-in fade-in-delay-1">
+       <div class="h-48 bg-gradient-to-br from-green-500 to-green-600 flex items-center justify-center group-hover:scale-110 transition duration-500"><i data-lucide="table" class="w-16 h-16 text-white opacity-80"></i>
+       </div>
+       <div class="p-6">
+        <h3 class="font-poppins font-800 text-xl mb-3">Excel Avançado</h3>
+        <p class="text-gray-600 text-sm mb-4 min-h-12">Fórmulas complexas, tabelas dinâmicas, dashboards e análise de dados.</p>
+        <div class="flex items-center justify-between"><span class="text-xs font-semibold text-gray-400">8 semanas</span> <a href="#cta" class="text-neway-red font-poppins font-700 hover:gap-2 transition inline-flex items-center gap-1">Detalhes <i data-lucide="arrow-right" class="w-4 h-4"></i></a>
+        </div>
+       </div>
+      </div><!-- Curso 3 -->
+      <div class="bg-white rounded-2xl border border-gray-200 overflow-hidden card-hover group fade-in fade-in-delay-2">
+       <div class="h-48 bg-gradient-to-br from-purple-500 to-purple-600 flex items-center justify-center group-hover:scale-110 transition duration-500"><i data-lucide="cpu" class="w-16 h-16 text-white opacity-80"></i>
+       </div>
+       <div class="p-6">
+        <h3 class="font-poppins font-800 text-xl mb-3">Informática Básica</h3>
+        <p class="text-gray-600 text-sm mb-4 min-h-12">Do zero ao domínio. Computador, internet e programas essenciais de A a Z.</p>
+        <div class="flex items-center justify-between"><span class="text-xs font-semibold text-gray-400">10 semanas</span> <a href="#cta" class="text-neway-red font-poppins font-700 hover:gap-2 transition inline-flex items-center gap-1">Detalhes <i data-lucide="arrow-right" class="w-4 h-4"></i></a>
+        </div>
+       </div>
+      </div><!-- Curso 4 -->
+      <div class="bg-white rounded-2xl border border-gray-200 overflow-hidden card-hover group fade-in fade-in-delay-3">
+       <div class="h-48 bg-gradient-to-br from-neway-red to-red-700 flex items-center justify-center group-hover:scale-110 transition duration-500"><i data-lucide="briefcase" class="w-16 h-16 text-white opacity-80"></i>
+       </div>
+       <div class="p-6">
+        <h3 class="font-poppins font-800 text-xl mb-3">Auxiliar Administrativo</h3>
+        <p class="text-gray-600 text-sm mb-4 min-h-12">Prepare-se para assumir funções administrativas em qualquer empresa.</p>
+        <div class="flex items-center justify-between"><span class="text-xs font-semibold text-gray-400">16 semanas</span> <a href="#cta" class="text-neway-red font-poppins font-700 hover:gap-2 transition inline-flex items-center gap-1">Detalhes <i data-lucide="arrow-right" class="w-4 h-4"></i></a>
+        </div>
+       </div>
+      </div>
+     </div>
+    </div>
+   </section><!-- Diferenciais - Jeito Neway -->
+   <section id="diferenciais" class="w-full py-28 bg-gradient-to-b from-neway-gray to-white relative overflow-hidden">
+    <div class="absolute top-20 left-0 w-72 h-72 bg-neway-red/5 rounded-full blur-3xl"></div>
+    <div class="max-w-7xl mx-auto px-6 relative z-10">
+     <div class="text-center mb-20">
+      <p class="text-neway-red font-poppins font-700 text-sm uppercase tracking-widest mb-3">Vantagens</p>
+      <h2 class="font-poppins font-900 text-5xl text-neway-dark mb-4">O Jeito Neway de Ensinar</h2>
+      <p class="text-gray-600 max-w-2xl mx-auto text-lg">Conheça os diferenciais que nos tornaram referência em capacitação profissional</p>
+     </div>
+     <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8"><!-- Diferencial 1 -->
+      <div class="bg-white rounded-2xl p-8 border border-gray-100 hover:border-neway-red/20 transition card-hover fade-in">
+       <div class="w-14 h-14 bg-neway-red/10 rounded-xl flex items-center justify-center mb-5 group-hover:bg-neway-red/20 transition"><i data-lucide="target" class="w-7 h-7 text-neway-red"></i>
+       </div>
+       <h3 class="font-poppins font-800 text-xl mb-3">Aulas 100% Práticas</h3>
+       <p class="text-gray-600 leading-relaxed">Simulação de atividades reais de empresas desde a primeira aula. Você aprende fazendo.</p>
+      </div><!-- Diferencial 2 -->
+      <div class="bg-white rounded-2xl p-8 border border-gray-100 hover:border-neway-red/20 transition card-hover fade-in fade-in-delay-1">
+       <div class="w-14 h-14 bg-neway-red/10 rounded-xl flex items-center justify-center mb-5"><i data-lucide="users" class="w-7 h-7 text-neway-red"></i>
+       </div>
+       <h3 class="font-poppins font-800 text-xl mb-3">Professores Experientes</h3>
+       <p class="text-gray-600 leading-relaxed">Instrutores com vivência profissional real no mercado de trabalho há mais de 10 anos.</p>
+      </div><!-- Diferencial 3 -->
+      <div class="bg-white rounded-2xl p-8 border border-gray-100 hover:border-neway-red/20 transition card-hover fade-in fade-in-delay-2">
+       <div class="w-14 h-14 bg-neway-red/10 rounded-xl flex items-center justify-center mb-5"><i data-lucide="clock" class="w-7 h-7 text-neway-red"></i>
+       </div>
+       <h3 class="font-poppins font-800 text-xl mb-3">Horários Flexíveis</h3>
+       <p class="text-gray-600 leading-relaxed">Aulas pela manhã, tarde ou noite. Presencial ou 100% online pelo NewayEAD.</p>
+      </div><!-- Diferencial 4 -->
+      <div class="bg-white rounded-2xl p-8 border border-gray-100 hover:border-neway-red/20 transition card-hover fade-in fade-in-delay-3">
+       <div class="w-14 h-14 bg-neway-red/10 rounded-xl flex items-center justify-center mb-5"><i data-lucide="monitor" class="w-7 h-7 text-neway-red"></i>
+       </div>
+       <h3 class="font-poppins font-800 text-xl mb-3">Plataforma NewayEAD</h3>
+       <p class="text-gray-600 leading-relaxed">Estude de qualquer lugar com nossa plataforma de educação online própria e moderna.</p>
+      </div><!-- Diferencial 5 -->
+      <div class="bg-white rounded-2xl p-8 border border-gray-100 hover:border-neway-red/20 transition card-hover fade-in fade-in-delay-4">
+       <div class="w-14 h-14 bg-neway-red/10 rounded-xl flex items-center justify-center mb-5"><i data-lucide="briefcase-business" class="w-7 h-7 text-neway-red"></i>
+       </div>
+       <h3 class="font-poppins font-800 text-xl mb-3">Traga seu Trabalho</h3>
+       <p class="text-gray-600 leading-relaxed">Resolva atividades reais do seu emprego durante as aulas com orientação profissional.</p>
+      </div><!-- Diferencial 6 -->
+      <div class="bg-white rounded-2xl p-8 border border-gray-100 hover:border-neway-red/20 transition card-hover fade-in fade-in-delay-4">
+       <div class="w-14 h-14 bg-neway-red/10 rounded-xl flex items-center justify-center mb-5"><i data-lucide="award" class="w-7 h-7 text-neway-red"></i>
+       </div>
+       <h3 class="font-poppins font-800 text-xl mb-3">Certificado Reconhecido</h3>
+       <p class="text-gray-600 leading-relaxed">Certificação válida para currículo, LinkedIn e aumentar suas chances de promoção.</p>
+      </div>
+     </div>
+    </div>
+   </section><!-- Depoimentos -->
+   <section id="depoimentos" class="w-full bg-white py-28">
+    <div class="max-w-7xl mx-auto px-6">
+     <div class="text-center mb-20">
+      <p class="text-neway-red font-poppins font-700 text-sm uppercase tracking-widest mb-3">Histórias Reais</p>
+      <h2 class="font-poppins font-900 text-5xl text-neway-dark mb-4">Transformação de Nossos Alunos</h2>
+      <p class="text-gray-600 max-w-2xl mx-auto text-lg">Veja como o método Neway mudou a vida profissional de milhares de pessoas</p>
+     </div>
+     <div class="grid md:grid-cols-3 gap-8"><!-- Depoimento 1 -->
+      <div class="bg-gradient-to-br from-blue-50 to-blue-100/30 rounded-2xl p-8 border border-blue-200/30 card-hover fade-in">
+       <div class="flex items-center gap-4 mb-6">
+        <div class="w-14 h-14 bg-gradient-to-br from-blue-400 to-blue-600 rounded-full flex items-center justify-center text-white font-poppins font-900">
+         MS
+        </div>
+        <div>
+         <p class="font-poppins font-700 text-neway-dark">Maria Silva</p>
+         <p class="text-sm text-gray-600">Auxiliar Administrativo</p>
+        </div>
+       </div>
+       <p class="text-gray-700 leading-relaxed mb-4 italic">"Consegui meu primeiro emprego em 2 meses após terminar o curso! O método prático e os professores experientes fizeram toda diferença na minha vida."</p>
+       <div class="flex gap-1 text-yellow-400 text-lg">
+        ⭐⭐⭐⭐⭐
+       </div>
+      </div><!-- Depoimento 2 -->
+      <div class="bg-gradient-to-br from-green-50 to-green-100/30 rounded-2xl p-8 border border-green-200/30 card-hover fade-in fade-in-delay-1">
+       <div class="flex items-center gap-4 mb-6">
+        <div class="w-14 h-14 bg-gradient-to-br from-green-400 to-green-600 rounded-full flex items-center justify-center text-white font-poppins font-900">
+         JP
+        </div>
+        <div>
+         <p class="font-poppins font-700 text-neway-dark">João Pedro</p>
+         <p class="text-sm text-gray-600">Analista Financeiro</p>
+        </div>
+       </div>
+       <p class="text-gray-700 leading-relaxed mb-4 italic">"O Excel Avançado me deu a promoção que eu buscava! Agora trabalho com dashboards e análises que aprendi direto na Neway. Recomendo!"</p>
+       <div class="flex gap-1 text-yellow-400 text-lg">
+        ⭐⭐⭐⭐⭐
+       </div>
+      </div><!-- Depoimento 3 -->
+      <div class="bg-gradient-to-br from-purple-50 to-purple-100/30 rounded-2xl p-8 border border-purple-200/30 card-hover fade-in fade-in-delay-2">
+       <div class="flex items-center gap-4 mb-6">
+        <div class="w-14 h-14 bg-gradient-to-br from-purple-400 to-purple-600 rounded-full flex items-center justify-center text-white font-poppins font-900">
+         AC
+        </div>
+        <div>
+         <p class="font-poppins font-700 text-neway-dark">Ana Costa</p>
+         <p class="text-sm text-gray-600">Secretária Executiva</p>
+        </div>
+       </div>
+       <p class="text-gray-700 leading-relaxed mb-4 italic">"Estudei 100% pelo NewayEAD e tive total flexibilidade! Qualidade de aula excelente e professores dispostos. Que decisão incrível!"</p>
+       <div class="flex gap-1 text-yellow-400 text-lg">
+        ⭐⭐⭐⭐⭐
+       </div>
+      </div>
+     </div>
+    </div>
+   </section><!-- CTA Final -->
+   <section id="cta" class="w-full gradient-bg py-24 relative overflow-hidden">
+    <div class="absolute inset-0 opacity-10">
+     <div class="absolute top-0 left-1/4 w-96 h-96 bg-white rounded-full blur-3xl"></div>
+     <div class="absolute bottom-0 right-1/4 w-96 h-96 bg-white rounded-full blur-3xl"></div>
+    </div>
+    <div class="max-w-4xl mx-auto px-6 text-center text-white relative z-10">
+     <h2 class="font-poppins font-900 text-5xl md:text-6xl mb-6 leading-tight">Comece Agora e Mude seu Futuro Profissional</h2>
+     <p class="text-xl text-red-100 mb-10 max-w-2xl mx-auto leading-relaxed">Agende uma aula experimental gratuita e descubra por que somos referência em capacitação profissional há mais de 15 anos</p>
+     <div class="flex flex-col sm:flex-row gap-4 justify-center"><a href="https://wa.me/5531985404659?text=Olá,%20tenho%20interesse%20em%20agendar%20uma%20aula%20experimental" target="_blank" class="bg-white text-neway-red font-poppins font-700 px-10 py-4 rounded-xl hover:shadow-2xl transition duration-300 inline-flex items-center justify-center gap-2"><i data-lucide="calendar" class="w-5 h-5"></i> Agendar Aula Experimental </a> <a href="#contato" class="border-2 border-white text-white font-poppins font-700 px-10 py-4 rounded-xl hover:bg-white/10 transition duration-300 inline-flex items-center justify-center gap-2"> <i data-lucide="phone" class="w-5 h-5"></i> Fale Conosco </a>
+     </div>
+    </div>
+   </section><!-- Footer Premium -->
+   <footer id="contato" class="w-full bg-neway-dark py-16 border-t border-gray-700">
+    <div class="max-w-7xl mx-auto px-6">
+     <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-10 mb-12"><!-- Coluna 1 -->
+      <div>
+       <div class="flex items-center gap-3 mb-6">
+        <div class="w-10 h-10 bg-neway-red rounded-lg flex items-center justify-center"><span class="text-white font-poppins font-900">N</span>
+        </div>
+        <div>
+         <p class="font-poppins font-700 text-white text-sm">Neway</p>
+         <p class="text-xs text-gray-400">Capacitação Profissional</p>
+        </div>
+       </div>
+       <p class="text-gray-400 text-sm leading-relaxed">Transformando vidas através da educação em tecnologia desde 2010. Mais de 2.500 alunos formados e colocados no mercado.</p>
+      </div><!-- Coluna 2 -->
+      <div>
+       <h4 class="font-poppins font-700 text-white mb-4 text-sm uppercase tracking-wider">Cursos</h4>
+       <ul class="space-y-2">
+        <li><a href="#cursos" class="text-gray-400 hover:text-neway-red transition text-sm">Pacote Office</a></li>
+        <li><a href="#cursos" class="text-gray-400 hover:text-neway-red transition text-sm">Excel Avançado</a></li>
+        <li><a href="#cursos" class="text-gray-400 hover:text-neway-red transition text-sm">Informática Básica</a></li>
+        <li><a href="#cursos" class="text-gray-400 hover:text-neway-red transition text-sm">Auxiliar Administrativo</a></li>
+       </ul>
+      </div><!-- Coluna 3 -->
+      <div>
+       <h4 class="font-poppins font-700 text-white mb-4 text-sm uppercase tracking-wider">Contato</h4>
+       <div class="space-y-3">
+        <p id="footer-phone" class="flex items-center gap-2 text-gray-400 hover:text-neway-red transition cursor-pointer text-sm"><i data-lucide="phone" class="w-4 h-4"></i> <span>(31) 98540-4659</span></p>
+        <p id="footer-address" class="flex items-start gap-2 text-gray-400 text-sm"><i data-lucide="map-pin" class="w-4 h-4 mt-0.5 flex-shrink-0"></i> <span>Rua Professor Antonio ernesto, 189 - Centro/ RAPOSOS</span></p>
+        <p class="flex items-center gap-2 text-gray-400 text-sm"><i data-lucide="mail" class="w-4 h-4"></i> <span>newaycapacitacaoprofissional@gmail.com.br</span></p>
+       </div>
+      </div><!-- Coluna 4 -->
+      <div>
+       <h4 class="font-poppins font-700 text-white mb-4 text-sm uppercase tracking-wider">Redes Sociais</h4>
+       <div class="flex gap-3"><a href="#" class="w-10 h-10 bg-gray-700 rounded-lg flex items-center justify-center hover:bg-neway-red transition duration-300"> <i data-lucide="instagram" class="w-5 h-5 text-white"></i> </a> <a href="#" class="w-10 h-10 bg-gray-700 rounded-lg flex items-center justify-center hover:bg-neway-red transition duration-300"> <i data-lucide="facebook" class="w-5 h-5 text-white"></i> </a> <a href="#" class="w-10 h-10 bg-gray-700 rounded-lg flex items-center justify-center hover:bg-neway-red transition duration-300"> <i data-lucide="youtube" class="w-5 h-5 text-white"></i> </a> <a href="#" class="w-10 h-10 bg-gray-700 rounded-lg flex items-center justify-center hover:bg-neway-red transition duration-300"> <i data-lucide="linkedin" class="w-5 h-5 text-white"></i> </a>
+       </div>
+      </div>
+     </div><!-- Copyright -->
+     <div class="border-t border-gray-700 pt-8">
+      <div class="flex flex-col md:flex-row justify-between items-center gap-4 text-sm text-gray-400">
+       <p>© 2025 Neway Capacitação Profissional. Todos os direitos reservados.</p>
+       <div class="flex gap-6"><a href="#" class="hover:text-neway-red transition">Política de Privacidade</a> <a href="#" class="hover:text-neway-red transition">Termos de Uso</a>
+       </div>
+      </div>
+     </div>
+    </div>
+   </footer>
+  </div>
+  <script>
+    const defaultConfig = {
+      hero_title: 'Domine o Pacote Office e se destaque no mercado',
+      hero_subtitle: 'Transforme seu potencial com aulas 100% práticas. Simulações reais, professores experientes e certificação reconhecida pelo mercado.',
+      cta_button_text: 'Matrículas Abertas',
+      footer_phone: '(11) 99999-9999',
+      footer_address: 'Rua Example, 123 - São Paulo/SP',
+      background_color: '#FFFFFF',
+      surface_color: '#f8f9fa',
+      text_color: '#1a1a2e',
+      primary_action_color: '#E63946',
+      secondary_action_color: '#a0aec0',
+      font_family: 'Poppins',
+      font_size: 16
+    };
+
+    function applyConfig(config) {
+      const c = { ...defaultConfig, ...config };
+      document.getElementById('hero-title').textContent = c.hero_title;
+      document.getElementById('hero-subtitle').textContent = c.hero_subtitle;
+      document.getElementById('cta-btn').textContent = c.cta_button_text;
+      document.getElementById('footer-phone').innerHTML = <i data-lucide="phone" class="w-4 h-4"></i> <span>${c.footer_phone}</span>;
+      document.getElementById('footer-address').innerHTML = <i data-lucide="map-pin" class="w-4 h-4 mt-0.5 flex-shrink-0"></i> <span>${c.footer_address}</span>;
+
+      document.body.style.fontFamily = ${c.font_family}, sans-serif;
+      document.body.style.fontSize = ${c.font_size}px;
+
+      lucide.createIcons();
+    }
+
+    window.elementSdk.init({
+      defaultConfig,
+      onConfigChange: async (config) => { applyConfig(config); },
+      mapToCapabilities: (config) => ({
+        recolorables: [
+          { get: () => config.background_color || defaultConfig.background_color, set: (v) => { config.background_color = v; window.elementSdk.setConfig({ background_color: v }); } },
+          { get: () => config.surface_color || defaultConfig.surface_color, set: (v) => { config.surface_color = v; window.elementSdk.setConfig({ surface_color: v }); } },
+          { get: () => config.text_color || defaultConfig.text_color, set: (v) => { config.text_color = v; window.elementSdk.setConfig({ text_color: v }); } },
+          { get: () => config.primary_action_color || defaultConfig.primary_action_color, set: (v) => { config.primary_action_color = v; window.elementSdk.setConfig({ primary_action_color: v }); } },
+          { get: () => config.secondary_action_color || defaultConfig.secondary_action_color, set: (v) => { config.secondary_action_color = v; window.elementSdk.setConfig({ secondary_action_color: v }); } }
+        ],
+        borderables: [],
+        fontEditable: { get: () => config.font_family || defaultConfig.font_family, set: (v) => { config.font_family = v; window.elementSdk.setConfig({ font_family: v }); } },
+        fontSizeable: { get: () => config.font_size || defaultConfig.font_size, set: (v) => { config.font_size = v; window.elementSdk.setConfig({ font_size: v }); } }
+      }),
+      mapToEditPanelValues: (config) => new Map([
+        ['hero_title', config.hero_title || defaultConfig.hero_title],
+        ['hero_subtitle', config.hero_subtitle || defaultConfig.hero_subtitle],
+        ['cta_button_text', config.cta_button_text || defaultConfig.cta_button_text],
+        ['footer_phone', config.footer_phone || defaultConfig.footer_phone],
+        ['footer_address', config.footer_address || defaultConfig.footer_address]
+      ])
+    });
+
+    lucide.createIcons();
+  </script>
+ <script>(function(){function c(){var b=a.contentDocument||a.contentWindow.document;if(b){var d=b.createElement('script');d.innerHTML="window.__CF$cv$params={r:'9f3e396ed332f1b5',t:'MTc3NzQ2NDg0NC4wMDAwMDA='};var a=document.createElement('script');a.nonce='';a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);";b.getElementsByTagName('head')[0].appendChild(d)}}if(document.body){var a=document.createElement('iframe');a.height=1;a.width=1;a.style.position='absolute';a.style.top=0;a.style.left=0;a.style.border='none';a.style.visibility='hidden';document.body.appendChild(a);if('loading'!==document.readyState)c();else if(window.addEventListener)document.addEventListener('DOMContentLoaded',c);else{var e=document.onreadystatechange||function(){};document.onreadystatechange=function(b){e(b);'loading'!==document.readyState&&(document.onreadystatechange=e,c())}}}})();</script></body>
+</html>
